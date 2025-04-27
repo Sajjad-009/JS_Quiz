@@ -1,0 +1,394 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  scrollbar-width: none;
+  user-select: none;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 80%;
+  height: 10%;
+
+  border-bottom: 1px solid rgb(214, 214, 214);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10%;
+}
+
+.level-buttons {
+  /* border: 2px solid green; */
+  width: 22%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.TimeStatuseContainer > button,
+.level-buttons > button {
+  cursor: pointer;
+  height: 30%;
+  background-color: transparent;
+  border: none;
+
+  color: #007bff;
+}
+
+.TimeStatuseContainer {
+  width: 20%;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: bolder;
+}
+#submit {
+  height: 100%;
+  width: 40%;
+  background-color: #007bff;
+  color: white;
+  box-shadow: 2px 2px 5px gray;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 4px;
+}
+#submit:active {
+  box-shadow: -2px -2px 50px gray;
+}
+
+main {
+  /* border: 2px red solid; */
+  height: 50%;
+  width: 50%;
+  margin: 5% 50% 0 10%;
+}
+
+#question {
+  font-weight: bold;
+  user-select: none;
+}
+
+#options {
+  margin: 10% 0 10% 5%;
+  user-select: none;
+}
+
+#pageControler {
+  width: 90%;
+  height: 10%;
+
+  /* border: 2px solid green; */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40%;
+}
+
+#pageControler > button {
+  box-sizing: border-box;
+  color: white;
+  padding: 1%;
+  background-color: #007bff;
+  box-shadow: 2px 2px 5px gray;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+#pageControler > button:active {
+  box-shadow: -2px -2px 100px gray;
+}
+
+#pageControler > :nth-child(1) {
+  width: 15%;
+  letter-spacing: 1px;
+}
+#pageControler > :nth-child(2) {
+  width: 15%;
+  letter-spacing: 1px;
+}
+
+aside {
+  position: absolute;
+  top: 10.2%;
+  right: 2%;
+  height: 89%;
+  width: 25%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  border: 1px solid rgb(214, 214, 214);
+  background-color: rgb(248, 248, 248);
+}
+h4 {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+}
+#questionNumbers {
+  /* border: red 2px solid; */
+  display: grid;
+  grid-template-columns: repeat(5, 10fr);
+  place-items: center;
+  gap: 4%;
+
+  width: 95%;
+  height: 35%;
+}
+
+.buttons {
+  width: 100%;
+  height: 100%;
+
+  background-color: #fff;
+  border: 1px solid rgb(193, 193, 193);
+  box-shadow: 1px 1px 5px gray;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.buttons:active {
+  box-shadow: -1px -1px 10px #c4d9f0, 1px 1px 10px #c4d9f0;
+  color: #007bff;
+  font-weight: bolder;
+}
+#questionDetails {
+  /* border: 2px green solid; */
+  width: 90%;
+  height: 30%;
+  margin: 10% 0 0 5%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#startBtnContaine {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+
+  z-index: 10;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(12, 12, 12, 0.614);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#startbtn {
+  width: 10%;
+  height: 10%;
+
+  background-color: #007bff;
+  color: white;
+
+  box-shadow: 2px 2px 5px rgb(171, 171, 171);
+  box-shadow: 2px 2px 10px rgb(171, 171, 171);
+  box-shadow: 2px 2px 15px rgb(171, 171, 171);
+  outline: none;
+  border: none;
+
+  font-size: 1.3rem;
+  font-weight: bolder;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+#startbtn:active {
+  box-shadow: 2px 2px 50px rgb(171, 171, 171);
+}
+#Qnumber {
+  font-weight: bolder;
+}
+#navigate {
+  display: none;
+}
+
+#Next {
+  background-color: #fff;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@media (max-width:1240px){
+
+  header{
+    width: 90%;
+  }
+  .TimeStatuseContainer{
+    width: 30%;
+    /* border: 2px solid gray; */
+  }
+}
+
+  @media (max-width:1080px){
+
+    header{
+      width: 90%;
+    }
+    .level-buttons{
+      width: 30%;
+    }
+    #pageControler > :nth-child(1){
+      width: 20%;
+    }
+
+
+}
+
+@media (max-width:750px){
+
+  header{
+    width: 100%;
+    gap: 3%;
+  }
+  .level-buttons{
+    width: 35%;
+  }
+  .TimeStatuseContainer{
+    width: 40%;
+    gap: 1%;
+  }
+
+  #pageControler > :nth-child(1),#pageControler > :nth-child(2){
+    width: 30%;
+    height: 70%;
+  }
+  aside{
+    width: 40%;
+  }
+
+
+}
+
+
+@media (max-width: 500px) {
+  header {
+    padding-left: 10%;
+    width: 100%;
+    display: flex;
+    gap: 8%;
+  }
+  header > h2 {
+    font-size: large;
+  }
+  .level-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  #timeContainer {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+
+    font-size: 1.2em;
+    width: 40%;
+    height: 5%;
+  }
+  #startbtn {
+    width: 35%;
+  }
+  #submit {
+    width: 100%;
+  }
+  .TimeStatuseContainer {
+    margin-right: 10%;
+  }
+
+  #pageControler {
+    /* border: 2px solid black; */
+    width: 90%;
+    height: 10%;
+    gap: 20%;
+    padding-left: 5%;
+    box-sizing: border-box;
+  }
+
+  #pageControler > :nth-child(1) {
+    width: 40%;
+    height: 70%;
+  }
+  #pageControler > :nth-child(2) {
+    width: 30%;
+    height: 70%;
+  }
+  main {
+    margin-left: 50%;
+    width: 90%;
+    font-size: 15px;
+  }
+  .aside {
+    width: 0%;
+    display: none;
+    top: 11%;
+    right: 0%;
+    box-shadow: 5px 5px 20px gray;
+
+    transition: all 2s linear;
+  }
+
+  #navigate {
+    box-sizing: border-box;
+    color: white;
+    padding: 1%;
+    background-color: #007bff;
+    box-shadow: 2px 2px 5px gray;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+
+    width: 20%;
+    height: 5%;
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+  }
+
+  .Show{
+display: flex;
+width: 50%;
+  }
+}
